@@ -1,8 +1,18 @@
-import { Button, IconButton, Typography } from "@mui/material";
+import { Button, IconButton, styled, Typography } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import FingerprintIcon from "@mui/icons-material/Fingerprint";
-import { color, margin } from "@mui/system";
 function App() {
+  const Customecolor = styled(Button)({
+    background: "skyblue",
+    color: "black",
+    margin: "20px",
+    padding: "10px",
+    "&:hover": {
+      background: "black",
+      color: "white",
+    },
+  });
+
   return (
     <div className="App">
       <Button variant="text">Text</Button>
@@ -44,6 +54,12 @@ function App() {
       >
         custom color
       </Button>
+
+
+        <Customecolor>
+          Customecolor 2
+        </Customecolor>
+      {/* Now if you see that we are writing the code and customizing the color of button beside doing that what we can do create our own custome button*/}
     </div>
   );
 }
