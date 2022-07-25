@@ -2,8 +2,8 @@ import { Button, IconButton, styled, Typography } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import FingerprintIcon from "@mui/icons-material/Fingerprint";
 function App() {
-  const Customecolor = styled(Button)({
-    background: "skyblue",
+  const Customecolor = styled(Button)(({theme})=>({
+    background: theme.palette.primary.main,
     color: "black",
     margin: "20px",
     padding: "10px",
@@ -11,7 +11,7 @@ function App() {
       background: "black",
       color: "white",
     },
-  });
+  }));
 
   return (
     <div className="App">
@@ -19,7 +19,7 @@ function App() {
       <Button
         startIcon={<SettingsIcon />}
         variant="contained"
-        color="secondary"
+        color="otherColor"
       >
         Contained
       </Button>
@@ -57,7 +57,7 @@ function App() {
 
 
         <Customecolor>
-          Customecolor 2
+          Customecolor
         </Customecolor>
       {/* Now if you see that we are writing the code and customizing the color of button beside doing that what we can do create our own custome button*/}
     </div>
